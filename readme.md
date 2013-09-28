@@ -7,3 +7,10 @@ Sniff a directory and create a JSON file of it's children.
 
 
 If a file starts with a javascript object, sniff will add those key/value pairs to the data for each item's JSON representation.
+
+
+### running
+
+- `git clone git@github.com:matthewsimo/sniff.git`
+- `cd sniff`
+- `node app.js`
