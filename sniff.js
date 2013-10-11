@@ -4,8 +4,8 @@ sniff = sniff || {};
 
 
 var metaRegExp = new RegExp(/\{(\s|\S)+\}/);
-var dateRegExp = new RegExp(/\d\d\d\d\/\d\d\/\d\d/);
-var fileRegExp = new RegExp(/^\d+-([\w\d-]*)\.md/);
+var dateRegExp = new RegExp(/\d\d\d\d\-\d\d\-\d\d/);
+var fileRegExp = new RegExp(/^\d+-\d+-\d+-([\w\d-]*)\.md/);
 
 /* Parse
  * Accepts a directory path
@@ -29,13 +29,13 @@ sniff.parse = function(root) {
 
     if(meta !== null) {
       info[path.basename(root)] = JSON.parse(meta[0]);
-      info[path.basename(root)].content = fileContent.replace(meta[0], "");
+      info[path.basename(root)]["content"] = fileContent.replace(meta[0], "");
     } else {
-      info[path.basename(root)].content = fileContent;
+      info[path.basename(root)]["content"] = fileContent;
     }
 
-    info[path.basename(root)].slug = sniff.calcSlug(path.basename(root));
-    info[path.basename(root)].date = sniff.calcDate(root);
+    info[path.basename(root)]["slug"] = sniff.calcSlug(path.basename(root));
+    info[path.basename(root)]["date"] = sniff.calcDate(root);
 
   }
 
