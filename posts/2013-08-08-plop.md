@@ -1,8 +1,10 @@
+<!--
 {
   "title": "This is another Post example",
   "author": "Matthew Simo",
   "id": 1235
 }
+-->
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 

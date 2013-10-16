@@ -5,9 +5,12 @@ var sniff = require('./sniff'),
 
 /* Sniff posts directory - create the posts.json file. */
 
-var postData = sniff.parse('posts');
+var targetDir = 'posts';
+var outputFile = 'posts.json';
+var postData = sniff.parse(targetDir);
 
-fs.writeFile('posts.json', JSON.stringify(postData), function(err){
+fs.writeFile(outputFile, JSON.stringify(postData), function(err){
+  console.log("Writing json to " + outputFile);
   if(err) throw err;
 });
 

@@ -1,9 +1,9 @@
-{
+<!-- {
   "title": "This is the Post example",
   "author": "Matthew Simo",
   "tags": ["item", "item2", "thrice"],
   "id": 1234
-}
+} -->
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 

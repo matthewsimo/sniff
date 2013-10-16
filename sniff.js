@@ -3,13 +3,13 @@ path = require('path'),
 sniff = sniff || {};
 
 
-var metaRegExp = new RegExp(/\{(\s|\S)+\}/);
+var metaRegExp = new RegExp(/<!--\s*(\{(\s|\S)+\})\s*-->/);
 var dateRegExp = new RegExp(/\d\d\d\d\-\d\d\-\d\d/);
 var fileRegExp = new RegExp(/^\d+-\d+-\d+-([\w\d-]*)\.md/);
 
 /* Parse
  * Accepts a directory path
- * Returns root/children in json object
+ * Returns root/children recursively in json object
  */
 sniff.parse = function(root) {
 
@@ -28,7 +28,7 @@ sniff.parse = function(root) {
     var meta = fileContent.match(metaRegExp);
 
     if(meta !== null) {
-      info[path.basename(root)] = JSON.parse(meta[0]);
+      info[path.basename(root)] = JSON.parse(meta[1]);
       info[path.basename(root)]["content"] = fileContent.replace(meta[0], "");
     } else {
       info[path.basename(root)]["content"] = fileContent;
