@@ -1,0 +1,23 @@
+{
+  "name": "sniff",
+  "version": "0.0.1",
+  "description": "Sniff a directory to get a json representation of it.",
+  "main": "app.js",
+  "dependencies": {
+    "marked": "~0.2.9",
+    "fs-extra": "~0.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matthewsimo/sniff.git"
+  },
+  "author": "Matthew Simo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthewsimo/sniff/issues"
+  }
+}
